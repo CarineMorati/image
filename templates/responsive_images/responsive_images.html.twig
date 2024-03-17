@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Personnalisation pour les images dans le tableau */
+     .responsive-img {
+            max-width: 100%;
+            max-height: 300px; /* Hauteur maximale des images */
+            width: auto; /* Largeur automatique pour conserver les proportions */
+            height: auto; /* Hauteur automatique pour conserver les proportions */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        {% for image in images %}
+       <div class="col-md-4 mb-3">
+            <img src="images/{{image}}" class="img-fluid responsive-img" alt="Responsive image">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
